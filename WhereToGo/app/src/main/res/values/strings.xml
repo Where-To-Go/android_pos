@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">어디가지</string>
+
+
+    <!--sign fragment-->
+    <string name="sign_not_member">no member sign in</string>
+</resources>
