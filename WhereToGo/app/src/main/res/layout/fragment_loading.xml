@@ -3,12 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFA000"
-    android:gravity="center_horizontal">
+    android:weightSum="2"
+    android:gravity="center">
 
     <ImageView
-        android:layout_width="250dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="30dp"
         android:src="@drawable/img_icon"/>
 
 </LinearLayout>

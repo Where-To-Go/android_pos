@@ -1,4 +1,4 @@
-package com.beongaeman.yanghc.wheretogo;
+package com.beongaeman.yanghc.wheretogo.Splash;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.beongaeman.yanghc.wheretogo.R;
 
 /**
  * Created by YangHC on 2017-07-01.

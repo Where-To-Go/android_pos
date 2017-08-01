@@ -1,4 +1,4 @@
-package com.beongaeman.yanghc.wheretogo;
+package com.beongaeman.yanghc.wheretogo.Splash;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -8,7 +8,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
+
+import com.beongaeman.yanghc.wheretogo.ExitDialog;
+import com.beongaeman.yanghc.wheretogo.R;
 
 public class SplashActivity extends Activity implements Runnable {
 

@@ -1,13 +1,16 @@
-package com.beongaeman.yanghc.wheretogo;
+package com.beongaeman.yanghc.wheretogo.Splash;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
+
+import com.beongaeman.yanghc.wheretogo.Table.MainActivity;
+import com.beongaeman.yanghc.wheretogo.R;
 
 /**
  * Created by YangHC on 2017-07-01.
@@ -39,7 +42,10 @@ public class SignFragment extends Fragment implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_sign_in:
-                ((SplashActivity)getActivity()).addFragment(new SignInFragment());
+                Intent intent = new Intent(SplashActivity.context,MainActivity.class);
+//                intent.putExtra(/*사용자계정정보*/);
+                startActivity(intent);
+                getActivity().finish();
                 break;
             case R.id.btn_sign_up:
                 ((SplashActivity)getActivity()).addFragment(new SignUpFragment());

@@ -3,28 +3,64 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFA000"
-    android:gravity="center_horizontal"
-    android:orientation="vertical">
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:weightSum="2">
 
 
     <ImageView
-        android:layout_width="250dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="80dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:layout_weight="1"
         android:src="@drawable/img_icon" />
 
-    <ImageButton
-        android:id="@+id/btn_sign_in"
-        android:layout_width="260dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/btn_sign_in" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="20dp">
 
-    <ImageButton
-        android:id="@+id/btn_sign_up"
-        android:layout_width="260dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/btn_sign_up" />
+        <EditText
+            android:id="@+id/edit_sign_in_id"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="@string/sign_id_edit"
+            android:textColorHint="#DDDDDD"
+            android:textColor="#FFFFFF" />
 
+        <EditText
+            android:id="@+id/edit_sign_in_pw"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/sign_pw_edit"
+            android:textColorHint="#DDDDDD"
+            android:textColor="#FFFFFF" />
+
+        <CheckBox
+            android:id="@+id/check_store_account"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:text="@string/sign_store_account"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:id="@+id/btn_sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btn_sign_in" />
+
+        <ImageButton
+            android:id="@+id/btn_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_sign_up" />
+    </LinearLayout>
 </LinearLayout>
