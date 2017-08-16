@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:gravity="center_vertical"
+    android:weightSum="2">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:padding="80dp"
+        android:layout_weight="1.05"
+        android:src="@drawable/img_icon_bg_w" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:rowCount="3"
+            android:columnCount="2"
+            android:useDefaultMargins="true"
+            >
+            <ImageButton
+                android:layout_width="240dp"
+                android:layout_height="160dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/btn_sales"
+
+                />
+            <ImageButton
+                android:layout_width="240dp"
+                android:layout_height="160dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/btn_revenue"/>
+            <ImageButton
+                android:layout_width="240dp"
+                android:layout_height="160dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/btn_settings"/>
+            <ImageButton
+                android:layout_width="240dp"
+                android:layout_height="160dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/btn_people"/>
+            <ImageButton
+                android:layout_width="240dp"
+                android:layout_height="160dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/btn_info"/>
+            <ImageButton
+                android:layout_margin="10dp"
+                android:layout_width="240dp"
+                android:layout_height="160dp"
+                android:background="@drawable/btn_power_off"/>
+
+        </GridLayout>
+        <TextView
+            android:layout_gravity="right"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="고객센터 :000-0000-0000"
+            android:textColor="#DDDDDD"
+            android:textSize="20dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

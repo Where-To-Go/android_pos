@@ -19,7 +19,7 @@
         </activity>
 
         <activity
-            android:name=".Table.MainActivity"
+            android:name=".Table.SemiMainActivity"
             android:screenOrientation="landscape">
 
         </activity>

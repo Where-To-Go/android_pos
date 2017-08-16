@@ -8,9 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
-import com.beongaeman.yanghc.wheretogo.Table.MainActivity;
 import com.beongaeman.yanghc.wheretogo.R;
+import com.beongaeman.yanghc.wheretogo.Table.SemiMainActivity;
 
 /**
  * Created by YangHC on 2017-07-01.
@@ -19,6 +20,7 @@ import com.beongaeman.yanghc.wheretogo.R;
 public class SignFragment extends Fragment implements View.OnClickListener{
     private ImageButton signUpBtn;
     private ImageButton signInBtn;
+    private TextView findUser;
 
 
     @Nullable
@@ -36,19 +38,24 @@ public class SignFragment extends Fragment implements View.OnClickListener{
         signInBtn.setOnClickListener(this);
         signUpBtn = (ImageButton) view.findViewById(R.id.btn_sign_up);
         signUpBtn.setOnClickListener(this);
+        findUser= (TextView)view.findViewById(R.id.findUser);
+        findUser.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_sign_in:
-                Intent intent = new Intent(SplashActivity.context,MainActivity.class);
+                Intent intent = new Intent(SplashActivity.context,SemiMainActivity.class);
 //                intent.putExtra(/*사용자계정정보*/);
                 startActivity(intent);
                 getActivity().finish();
                 break;
             case R.id.btn_sign_up:
                 ((SplashActivity)getActivity()).addFragment(new SignUpFragment());
+                break;
+            case R.id.findUser:
+                ((SplashActivity)getActivity()).addFragment(new FindUserFragment());
                 break;
         }
     }

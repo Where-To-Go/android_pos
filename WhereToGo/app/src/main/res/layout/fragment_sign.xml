@@ -23,22 +23,39 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <EditText
-            android:id="@+id/edit_sign_in_id"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:text="Email/Username"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp" />
+
+        <EditText
+            android:id="@+id/edit_sign_in_id"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/id_under_line"
             android:hint="@string/sign_id_edit"
-            android:textColorHint="#DDDDDD"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textColorHint="#DDDDDD" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:text="Password"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp" />
 
         <EditText
             android:id="@+id/edit_sign_in_pw"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:background="@drawable/pw_under_line"
             android:hint="@string/sign_pw_edit"
-            android:textColorHint="#DDDDDD"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textColorHint="#DDDDDD" />
 
         <CheckBox
             android:id="@+id/check_store_account"
@@ -49,18 +66,38 @@
             android:textColor="#FFFFFF"
             android:textSize="14sp" />
 
-        <ImageButton
-            android:id="@+id/btn_sign_in"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/btn_sign_in" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/btn_sign_up"
+            <ImageButton
+                android:id="@+id/btn_sign_in"
+                android:layout_width="166dp"
+                android:layout_height="63dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/btn_sign_in" />
+
+            <ImageButton
+                android:id="@+id/btn_sign_up"
+                android:layout_width="166dp"
+                android:layout_height="63dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/btn_sign_up" />
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="30dp"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/btn_sign_up" />
+            android:textSize="20dp"
+            android:layout_height="wrap_content"
+            android:text="아이디 및 비밀번호를 잊으셨나요?"
+            android:textColor="#ffe082"
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/under_line"
+            android:id="@+id/findUser"/>
     </LinearLayout>
 </LinearLayout>
