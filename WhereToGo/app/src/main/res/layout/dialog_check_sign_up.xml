@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="400dp"
+android:layout_height="250dp"
+android:orientation="vertical"
+android:weightSum="3"
+android:background="@drawable/roundedbackground"
+android:padding="20dp">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="2"
+    android:gravity="center"
+    android:textSize="20dp"
+    android:text="성공적으로 가입되었습니다.\n(가게 정보 미입력 시 이용에 제한이 있을 수 있습니다.)" />
+
+<LinearLayout
+    android:layout_width="300dp"
+    android:layout_height="0dp"
+    android:layout_gravity="center"
+    android:layout_weight="1"
+    android:weightSum="2">
+    <Button
+        android:id="@+id/btn_check_sign_up"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/roundedbutton"
+        android:text="확인"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        />
+
+</LinearLayout>
+</LinearLayout>

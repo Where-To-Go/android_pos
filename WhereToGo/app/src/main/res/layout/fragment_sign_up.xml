@@ -1,6 +1,255 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFA000"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:weightSum="2">
 
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="400dp"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+                <TextView
+                    android:layout_width="280dp"
+                    android:layout_height="40dp"
+                    android:text="사장님 성함"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30dp" />
+                <Button
+                    android:id="@+id/btn_check_person"
+                    android:layout_width="100dp"
+                    android:layout_height="38dp"
+                    android:background="@drawable/roundedbutton2"
+                    android:text="실명인증"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"/>
+        </LinearLayout>
+
+            <EditText
+                android:layout_gravity="center"
+                android:id="@+id/edit_sign_up_name"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/id_under_line"
+                android:hint="Please enter your name"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#DDDDDD" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="400dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:text="휴대폰 번호(ex. 01012345678)"
+                android:textColor="#FFFFFF"
+                android:textSize="30dp" />
+
+
+            <EditText
+                android:layout_gravity="center"
+                android:id="@+id/edit_sign_up_phone_number"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/id_under_line"
+                android:hint="Please enter your phone number"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#DDDDDD" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="400dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:text="생년월일(ex. 960324)"
+                android:textColor="#FFFFFF"
+                android:textSize="30dp" />
+
+
+            <EditText
+                android:layout_gravity="center"
+                android:id="@+id/edit_sign_up_brithday"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/id_under_line"
+                android:hint="Please enter your brithday"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#DDDDDD" />
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:layout_width="400dp"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:text="사업자 등록번호"
+                android:textColor="#FFFFFF"
+                android:textSize="30dp" />
+            <Button
+                android:id="@+id/btn_check_buisness_number"
+                android:layout_width="100dp"
+                android:layout_height="38dp"
+                android:background="@drawable/roundedbutton2"
+                android:text="중복확인"
+                android:textColor="@color/white"
+                android:textSize="20dp"/>
+        </LinearLayout>
+
+            <EditText
+                android:layout_gravity="center"
+                android:id="@+id/edit_sign_up_buisness_number"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/id_under_line"
+                android:hint="@string/sign_re_pw_edit"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#DDDDDD" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:layout_width="400dp"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:text="Email"
+                android:textColor="#FFFFFF"
+                android:textSize="30dp" />
+            <Button
+                android:id="@+id/btn_check_id"
+                android:layout_width="100dp"
+                android:layout_height="38dp"
+                android:background="@drawable/roundedbutton2"
+                android:text="중복확인"
+                android:textColor="@color/white"
+                android:textSize="20dp"/>
+        </LinearLayout>
+        <EditText
+            android:id="@+id/edit_sign_up_id"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/id_under_line"
+            android:hint="@string/sign_id_edit"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#DDDDDD"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:text="Password"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"
+            android:layout_gravity="center" />
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/pw_under_line">
+            <EditText
+                android:id="@+id/edit_sign_up_pw"
+                android:layout_width="340dp"
+                android:layout_height="match_parent"
+                android:hint="@string/sign_pw_edit"
+                android:textColor="#FFFFFF"
+                android:inputType="textPassword"
+                android:textColorHint="#DDDDDD"
+                android:layout_gravity="center" />
+            <Button
+                android:gravity="right"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="#00ff0000"
+                android:id="@+id/btn_turn_on_passwd"/>
+            </LinearLayout>
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:text="Confirm Password"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"
+            android:layout_gravity="center" />
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@drawable/pw_under_line">
+            <EditText
+                android:gravity="left"
+                android:id="@+id/edit_sign_up_re_pw"
+                android:layout_width="340dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:hint="@string/sign_re_pw_edit"
+                android:inputType="textPassword"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#DDDDDD"/>
+        <Button
+            android:gravity="right"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:background="#00ff0000"
+            android:id="@+id/btn_turn_on_re_passwd"/>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:layout_width="400dp"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:text="사업자 등록증 첨부"
+                android:textColor="#FFFFFF"
+                android:textSize="30dp" />
+            <Button
+                android:id="@+id/btn_check_buisness_document"
+                android:layout_width="100dp"
+                android:layout_height="38dp"
+                android:background="@drawable/roundedbutton2"
+                android:text="중복확인"
+                android:textColor="@color/white"
+                android:textSize="20dp"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_sign_up_complete"
+            android:layout_marginTop="40dp"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/roundedbutton"
+            android:textColor="@color/white"
+            android:text="완료"
+            android:textSize="30dp"/>
+
+    </LinearLayout>
 </LinearLayout>

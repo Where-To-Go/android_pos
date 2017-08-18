@@ -1,6 +1,5 @@
 package com.beongaeman.yanghc.wheretogo.Splash;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -13,7 +12,7 @@ import com.beongaeman.yanghc.wheretogo.R;
  * Created by 조연희 on 2017-08-16.
  */
 
-public class FindUserFragment extends Fragment{
+public class FindUserFragment extends android.support.v4.app.Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {

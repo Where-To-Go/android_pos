@@ -1,18 +1,17 @@
 package com.beongaeman.yanghc.wheretogo.Splash;
 
-import android.app.Activity;
-import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
 
 import com.beongaeman.yanghc.wheretogo.ExitDialog;
 import com.beongaeman.yanghc.wheretogo.R;
 
-public class SplashActivity extends Activity implements Runnable {
+public class SplashActivity extends AppCompatActivity implements Runnable {
 
     //Delayed time for loading
     private static final long SPLASH_DURATION = 3000L;
@@ -55,17 +54,17 @@ public class SplashActivity extends Activity implements Runnable {
 
     }
 
-    public void addFragment(Fragment fragment) {
-        android.app.FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.setCustomAnimations(R.animator.enter_from_right, R.animator.exit_to_left, 0, 0);
+    public void addFragment(android.support.v4.app.Fragment fragment) {
+        android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+//        ft.setCustomAnimations(R.animator.enter_from_right, R.animator.exit_to_left, 0, 0);
         ft.replace(R.id.layout_splash, fragment);
         ft.addToBackStack(null);
         ft.commit();
     }
 
-    public void switchFragment(Fragment fragment) {
-        android.app.FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.setCustomAnimations(R.animator.enter_from_right, R.animator.exit_to_left, 0, 0);
+    public void switchFragment(android.support.v4.app.Fragment fragment) {
+        android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+//        ft.setCustomAnimations(R.animator.enter_from_right, R.animator.exit_to_left, 0, 0);
         ft.replace(R.id.layout_splash, fragment);
         ft.commit();
     }

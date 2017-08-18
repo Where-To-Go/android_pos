@@ -17,7 +17,7 @@ import com.beongaeman.yanghc.wheretogo.Table.SemiMainActivity;
  * Created by YangHC on 2017-07-01.
  */
 
-public class SignFragment extends Fragment implements View.OnClickListener{
+public class SignFragment extends android.support.v4.app.Fragment implements View.OnClickListener{
     private ImageButton signUpBtn;
     private ImageButton signInBtn;
     private TextView findUser;
