@@ -29,7 +29,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center_vertical"
+                    android:gravity="center"
                     android:text="○영업일자:2017-08-19"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
@@ -38,7 +38,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center_vertical"
+                    android:gravity="center"
                     android:text="○포스번호:01"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
@@ -47,7 +47,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center_vertical"
+                    android:gravity="center"
                     android:text="○ 양희찬"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
@@ -56,8 +56,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center_vertical"
-                    android:text="○영업일자:2017-08-19"
+                    android:gravity="center_vertical|right"
+                    android:text="17:35"
+                    android:paddingRight="10dp"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
 
@@ -80,11 +81,12 @@
             app:layout_aspectRatio="260%"
             app:layout_widthPercent="20%"
             app:layout_marginTopPercent="1%"
-            app:layout_marginLeftPercent="1%"
-            android:padding="1dp"
-            android:scaleType="fitXY"
+            android:scaleType="fitCenter"
+            android:background="@color/parent"
             android:src="@drawable/btn_home"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp" />
     </android.support.percent.PercentRelativeLayout>
 
 </RelativeLayout>
