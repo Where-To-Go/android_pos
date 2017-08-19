@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:background="@color/light_grey"
         android:gravity="right"
         android:orientation="horizontal"
         android:weightSum="9">
@@ -22,15 +23,13 @@
             <Button
                 android:id="@+id/btn_table_list_left"
                 android:layout_width="0dp"
-                android:text="@string/icon_left"
                 android:textSize="30sp"
+                android:background="@drawable/img_left"
                 android:layout_height="match_parent"
                 android:layout_weight="1" />
 
             <android.support.v7.widget.RecyclerView
-
-                android:id="@+id/cardView"
-
+                android:id="@+id/list_table"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="6" />
@@ -38,7 +37,7 @@
             <Button
                 android:id="@+id/btn_table_list_right"
                 android:layout_width="0dp"
-                android:text=">"
+                android:background="@drawable/img_right"
                 android:textSize="30sp"
                 android:layout_height="match_parent"
                 android:layout_weight="1" />
@@ -182,6 +181,7 @@
         </LinearLayout>
 
         <GridView
+            android:layout_marginTop="10dp"
             android:id="@+id/grid_main_table"
             android:layout_width="0dp"
             android:layout_height="match_parent"

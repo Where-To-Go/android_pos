@@ -12,6 +12,10 @@ public class Table implements Serializable {
     private int maxPeople;
     private ArrayList<Menu> menuList;
 
+    public Table() {
+        maxPeople=10;
+    }
+
     public int getNum() {
         return num;
     }

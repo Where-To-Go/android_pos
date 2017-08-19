@@ -6,16 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.GridView;
+import android.widget.ImageButton;
 
 import com.beongaeman.yanghc.wheretogo.ExitDialog;
 import com.beongaeman.yanghc.wheretogo.R;
 import com.beongaeman.yanghc.wheretogo.Table.Fragment.TableFragment;
-import com.beongaeman.yanghc.wheretogo.VO.Table;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     public static Context context;
@@ -24,7 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     private FrameLayout layout;
-    private Button homeBtn;
+    private ImageButton homeBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initViews(){
         layout = (FrameLayout) findViewById(R.id.layout_home);
 
-        homeBtn = (Button) findViewById(R.id.btn_main_home);
+        homeBtn = (ImageButton) findViewById(R.id.btn_main_home);
         homeBtn.setOnClickListener(this);
 
         addFragment(new TableFragment());

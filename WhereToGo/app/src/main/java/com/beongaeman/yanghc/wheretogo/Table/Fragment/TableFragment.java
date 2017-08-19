@@ -3,6 +3,8 @@ package com.beongaeman.yanghc.wheretogo.Table.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +17,6 @@ import com.beongaeman.yanghc.wheretogo.Splash.FindUserFragment;
 import com.beongaeman.yanghc.wheretogo.Splash.SignUpFragment;
 import com.beongaeman.yanghc.wheretogo.Splash.SplashActivity;
 import com.beongaeman.yanghc.wheretogo.Table.MainActivity;
-import com.beongaeman.yanghc.wheretogo.Table.MyAdapter;
 import com.beongaeman.yanghc.wheretogo.Table.SemiMainActivity;
 import com.beongaeman.yanghc.wheretogo.VO.Table;
 
@@ -28,7 +29,10 @@ import java.util.ArrayList;
 public class TableFragment extends android.support.v4.app.Fragment implements View.OnClickListener, AdapterView.OnItemClickListener {
     private ArrayList<Button> menuBtns;
     private ArrayList<Table> tables;
+    private RecyclerView recyclerView;
+//    private Recl
     private GridView tableGrid;
+    private LinearLayoutManager linearLayoutManager;
 
     @Nullable
     @Override
@@ -41,6 +45,7 @@ public class TableFragment extends android.support.v4.app.Fragment implements Vi
     }
 
     private void initViews(View view) {
+        recyclerView = (RecyclerView) view.findViewById(R.id.list_table);
         tableGrid = (GridView) view.findViewById(R.id.grid_main_table);
 
         tables = new ArrayList<>();
@@ -48,8 +53,13 @@ public class TableFragment extends android.support.v4.app.Fragment implements Vi
             tables.add(new Table());
         }
 
-        MyAdapter myAdapter = new MyAdapter(MainActivity.context, tables);
-        tableGrid.setAdapter(myAdapter);
+        linearLayoutManager = new LinearLayoutManager(MainActivity.context, LinearLayoutManager.HORIZONTAL, false);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        TableRecyclerAdapter tableRecyclerAdapter = new TableRecyclerAdapter(MainActivity.context,tables,R.layout.fragment_table);
+        recyclerView.setAdapter(tableRecyclerAdapter);
+
+        TableGridAdapter tableGridAdapter = new TableGridAdapter(MainActivity.context, tables);
+        tableGrid.setAdapter(tableGridAdapter);
         tableGrid.setOnItemClickListener(this);
     }
 

@@ -1,4 +1,4 @@
-package com.beongaeman.yanghc.wheretogo.Table;
+package com.beongaeman.yanghc.wheretogo.Table.Fragment;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -17,11 +17,11 @@ import java.util.ArrayList;
  * Created by YangHC on 2017-07-03.
  */
 
-public class MyAdapter extends BaseAdapter {
+public class TableListAdapter extends BaseAdapter {
     private Context context;
     private ArrayList<Table> tables;
 
-    public MyAdapter(Context context, ArrayList<Table> tables) {
+    public TableListAdapter(Context context, ArrayList<Table> tables) {
         this.context = context;
         this.tables = tables;
     }
@@ -46,17 +46,20 @@ public class MyAdapter extends BaseAdapter {
         Table table = tables.get(position);
         if (convertView == null)
             convertView = ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE))
-                    .inflate(R.layout.view_grid, null);
+                    .inflate(R.layout.view_table_list, null);
 
-        TextView tv = (TextView) convertView.findViewById(R.id.txt_table_num);
+        TextView tableNumTxt = (TextView) convertView.findViewById(R.id.txt_table_list_num);
+        TextView tablePeopleTxt = (TextView) convertView.findViewById(R.id.txt_table_list_people);
 
-        String num;
+        String tableNum;
         if(position<9){
-            num="0"+String.valueOf(position+1);
+            tableNum="0"+String.valueOf(position+1);
         }else{
-            num=String.valueOf(position+1);
+            tableNum=String.valueOf(position+1);
         }
-        tv.setText("테이블 "+num);
+
+        tableNumTxt.setText(tableNum);
+        tablePeopleTxt.setText("("+0+"/"+table.getMaxPeople()+")");
 
         return convertView;
     }
