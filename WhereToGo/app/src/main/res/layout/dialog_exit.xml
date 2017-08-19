@@ -28,7 +28,9 @@
             android:id="@+id/btn_exit_cancel"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="10dp"
             android:layout_weight="1"
+            android:background="@color/white"
             android:text="취소" />
 
         <View
@@ -40,7 +42,9 @@
             android:id="@+id/btn_exit_exit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_margin="10dp"
             android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
             android:text="종료" />
 
     </LinearLayout>

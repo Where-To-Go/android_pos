@@ -50,7 +50,13 @@ public class MyAdapter extends BaseAdapter {
 
         TextView tv = (TextView) convertView.findViewById(R.id.txt_table_num);
 
-        tv.setText(String.valueOf(position + 1));
+        String num;
+        if(position<9){
+            num="0"+String.valueOf(position+1);
+        }else{
+            num=String.valueOf(position+1);
+        }
+        tv.setText("테이블 "+num);
 
         return convertView;
     }

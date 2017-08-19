@@ -23,6 +23,12 @@
             android:screenOrientation="landscape">
 
         </activity>
+
+        <activity
+            android:name=".Table.MainActivity"
+            android:screenOrientation="landscape">
+
+        </activity>
     </application>
 
 </manifest>

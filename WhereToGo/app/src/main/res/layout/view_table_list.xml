@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txt_table_num"
+            android:gravity="center"
+            android:text="tablenum"
+            app:layout_aspectRatio="300%"
+            app:layout_widthPercent="100%" />
+
+        <TextView
+            android:id="@+id/txt_table_people"
+            android:layout_below="@+id/txt_table_num"
+            android:gravity="center"
+            android:text="루비 x 100"
+            android:textStyle="bold"
+            app:layout_aspectRatio="300%"
+            app:layout_widthPercent="100%" />
+
+
+
+    </android.support.percent.PercentRelativeLayout>
+</LinearLayout>

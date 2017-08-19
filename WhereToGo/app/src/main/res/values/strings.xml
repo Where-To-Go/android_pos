@@ -7,5 +7,6 @@
     <string name="sign_pw_edit">Please enter your password</string>
     <string name="sign_re_pw_edit">Please enter your password one more</string>
     <string name="sign_store_account">Store this account</string>
+    <string name="icon_left"><![CDATA[<]]></string>
 
 </resources>

@@ -3,28 +3,29 @@ package com.beongaeman.yanghc.wheretogo.Table;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.GridView;
 
 import com.beongaeman.yanghc.wheretogo.ExitDialog;
 import com.beongaeman.yanghc.wheretogo.R;
+import com.beongaeman.yanghc.wheretogo.Table.Fragment.TableFragment;
 import com.beongaeman.yanghc.wheretogo.VO.Table;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemClickListener {
-    private Context context;
-    private Intent intent;
-    private Activity activity;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    public static Context context;
+    public static Intent intent;
+    public static Activity activity;
 
-    private Button exitBtn;
-    private GridView tableGrid;
 
-    private ArrayList<Table> tables;
+    private FrameLayout layout;
+    private Button homeBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,59 +36,41 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         activity = this;
 
         initViews();
-
     }
 
     private void initViews(){
-        tableGrid = (GridView) findViewById(R.id.grid_tables);
-        exitBtn = (Button) findViewById(R.id.btn_main_exit);
-        exitBtn.setOnClickListener(this);
+        layout = (FrameLayout) findViewById(R.id.layout_home);
 
-        tables = new ArrayList<>();
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
-        tables.add(new Table());
+        homeBtn = (Button) findViewById(R.id.btn_main_home);
+        homeBtn.setOnClickListener(this);
 
-        MyAdapter myAdapter = new MyAdapter(this,tables);
-        tableGrid.setAdapter(myAdapter);
-        tableGrid.setOnItemClickListener(this);
+        addFragment(new TableFragment());
+
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btn_exit_exit:
-                finish();
+            case R.id.btn_main_home:
+                //TODO: go to home
+
                 break;
         }
+    }
+
+    public void addFragment(android.support.v4.app.Fragment fragment) {
+        android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+//        ft.setCustomAnimations(R.animator.enter_from_right, R.animator.exit_to_left, 0, 0);
+        ft.replace(R.id.layout_home, fragment);
+        ft.addToBackStack(null);
+        ft.commit();
+    }
+
+    public void switchFragment(android.support.v4.app.Fragment fragment) {
+        android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+//        ft.setCustomAnimations(R.animator.enter_from_right, R.animator.exit_to_left, 0, 0);
+        ft.replace(R.id.layout_home, fragment);
+        ft.commit();
     }
 
     @Override
@@ -101,7 +84,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+    protected void onDestroy() {
+        super.onDestroy();
+        context = null;
+        intent = null;
+        activity = null;
 
+        System.gc();
     }
 }

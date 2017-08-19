@@ -1,211 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:weightSum="8"
-    tools:context=".Table.MainActivity">
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="7"
         android:orientation="vertical"
-        android:weightSum="11">
+        android:weightSum="12">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2"
-            android:orientation="vertical"
-            android:weightSum="6">
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:weightSum="9">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
                 android:weightSum="4">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="영업일자 : 2017-07-04" />
+                    android:gravity="center_vertical"
+                    android:text="○영업일자:2017-08-19"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="포스번호 : 01" />
+                    android:gravity="center_vertical"
+                    android:text="○포스번호:01"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="16:04" />
+                    android:gravity="center_vertical"
+                    android:text="○ 양희찬"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="영업일자 : 2017-07-04" />
+                    android:gravity="center_vertical"
+                    android:text="○영업일자:2017-08-19"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:weightSum="6">
-
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1" />
-
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1" />
-
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1" />
-
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1" />
-
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1" />
-
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1" />
-            </LinearLayout>
-
         </LinearLayout>
 
-        <LinearLayout
+        <FrameLayout
+            android:id="@+id/layout_home"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="10">
-
-            <GridView
-                android:id="@+id/grid_tables"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:numColumns="6" />
-        </LinearLayout>
-
+            android:layout_weight="11" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:weightSum="12">
+    <Button
+        android:id="@+id/btn_main_home"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:text="어디가지"
+        android:textSize="30sp"
+        android:padding="1dp"
+        android:layout_margin="10dp"
+        />
 
-        <Button
-            android:id="@+id/btn_main_exit"
-            android:layout_width="60dp"
-            android:layout_height="0dp"
-            android:layout_gravity="right"
-            android:layout_weight="1" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:text="이동"
-            android:textSize="13sp"
-            android:padding="0dp"/>
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:textSize="13sp"
-            android:padding="0dp"
-            android:text="분할" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:textSize="13sp"
-            android:padding="0dp"
-            android:layout_weight="1"
-            android:text="단체" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:textSize="13sp"
-            android:padding="0dp"
-            android:layout_weight="1"
-            android:text="예약관리" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:textSize="13sp"
-            android:padding="0dp"
-            android:layout_weight="1"
-            android:text="대기접수" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:textSize="13sp"
-            android:padding="0dp"
-            android:text="웹정보" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:textSize="13sp"
-            android:padding="0dp"
-            android:text="영수증관리" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:textSize="13sp"
-            android:padding="0dp"
-            android:layout_weight="1"
-            android:text="재출력" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:textSize="13sp"
-            android:padding="0dp"
-            android:text="환전" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:textSize="13sp"
-            android:padding="0dp"
-            android:text="간이영수증" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:textSize="13sp"
-            android:padding="0dp"
-            android:text="판매현황" />
-    </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>
