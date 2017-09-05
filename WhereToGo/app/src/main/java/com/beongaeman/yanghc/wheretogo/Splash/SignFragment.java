@@ -1,12 +1,12 @@
 package com.beongaeman.yanghc.wheretogo.Splash;
 
-import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -21,6 +21,11 @@ public class SignFragment extends android.support.v4.app.Fragment implements Vie
     private ImageButton signUpBtn;
     private ImageButton signInBtn;
     private TextView findUser;
+    private EditText edit_sign_in_id;
+    private EditText edit_sign_in_pw;
+    private String Userid;
+    private String Userpw;
+    private final String SERVER_ADDRESS = "http://13.59.184.129:8080/wheretogo/api/{version}/pos/signin";
 
 
     @Nullable
@@ -40,6 +45,8 @@ public class SignFragment extends android.support.v4.app.Fragment implements Vie
         signUpBtn.setOnClickListener(this);
         findUser= (TextView)view.findViewById(R.id.findUser);
         findUser.setOnClickListener(this);
+        edit_sign_in_id = (EditText)view.findViewById(R.id.edit_sign_in_id);
+        edit_sign_in_pw=(EditText)view.findViewById(R.id.edit_sign_in_pw);
     }
 
     @Override
@@ -52,6 +59,10 @@ public class SignFragment extends android.support.v4.app.Fragment implements Vie
                 getActivity().finish();
                 break;
             case R.id.btn_sign_up:
+                Userid = edit_sign_in_id.getText().toString();
+                Userpw = edit_sign_in_pw.getText().toString();
+//                URLConnection connection = new URL(SERVER_ADDRESS).openConnection();
+
                 ((SplashActivity)getActivity()).addFragment(new SignUpFragment());
                 break;
             case R.id.findUser:

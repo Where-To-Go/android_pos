@@ -24,15 +24,27 @@
                 android:layout_height="match_parent"
                 android:layout_weight="7"
                 android:weightSum="4">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="○영업일자:2017-08-19"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:weightSum="2">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="○영업일자:"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/pos_day"
+                            android:text="0000-00-00"
+                            android:textColor="@color/white"/>
+            </LinearLayout>
 
                 <TextView
                     android:layout_width="0dp"
@@ -53,6 +65,7 @@
                     android:textSize="16sp" />
 
                 <TextView
+                    android:id="@+id/pos_time"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
